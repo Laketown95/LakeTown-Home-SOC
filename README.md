@@ -20,3 +20,13 @@ This lab is built using a nested virtualization design inside Oracle VirtualBox.
 * **Internal Network:** Hosts the primary target environment, including a Windows workspace monitored by Wazuh and a Kali Linux attack box.
 * **DMZ (Demilitarized Zone):** Isolates the standalone vulnerable machine ("Basic Pentesting VM") to mimic a public-facing network vector.
 * **Host-Only Network:** Secures the Wazuh Manager infrastructure, ensuring telemetry and log forwarding happen over a dedicated management backplane.
+
+## Security Controls & Visibility Matrix
+To ensure comprehensive logging and monitoring across the lab environment, a Visibility Matrix was established. This maps out how detection telemetry is collected and what security bounds are placed on each asset.
+
+![Lab Visibility Matrix](images/visibility-matrix.png)
+
+### Control Details
+* **Log Aggregation:** Centralized telemetry collection via the Wazuh Manager over secure channels.
+* **Network Enforcements:** Traffic inspection, logging, and network segregation handled entirely by the pfSense firewall core.
+* **Asset Categorization:** Differentiation between fully monitored internal assets (Ubuntu VM) and intentional monitoring blindspots or external elements (Kali Linux).
