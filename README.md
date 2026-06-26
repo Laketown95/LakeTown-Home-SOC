@@ -30,3 +30,15 @@ To ensure comprehensive logging and monitoring across the lab environment, a Vis
 * **Log Aggregation:** Centralized telemetry collection via the Wazuh Manager over secure channels.
 * **Network Enforcements:** Traffic inspection, logging, and network segregation handled entirely by the pfSense firewall core.
 * **Asset Categorization:** Differentiation between fully monitored internal assets (Ubuntu VM) and intentional monitoring blindspots or external elements (Kali Linux).
+
+## NIST Cybersecurity Framework (CSF) Alignment
+The infrastructure and operational policies of the LakeTown Digital Fortress are designed to map directly against the core pillars of the NIST Cybersecurity Framework (CSF).
+
+![NIST CSF Security Controls Overview](images/security-controls-overview.png)
+
+### Framework Implementation Details
+* **Identify:** Managed via comprehensive network mapping, active asset inventory tracking, and vulnerability scans.
+* **Protect:** Enforced using multi-factor authentication (MFA), strict pfSense firewall policies, network segmentation, and OS hardening protocols.
+* **Detect:** Powered by the centralized Wazuh SIEM manager, file integrity monitoring (FIM), custom detection logic, and continuous log analysis.
+* **Respond:** Defined by an active incident response containment process targeting unauthorized logins and anomalous events.
+* **Recover:** Supported by configuration change logs, snapshot baselines, and structured system backup/recovery procedures.
